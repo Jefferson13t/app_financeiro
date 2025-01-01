@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:app_financeiro/common/constants/app_colors.dart';
 import 'package:app_financeiro/common/constants/app_text_styles.dart';
+import 'package:app_financeiro/common/constants/routes.dart';
 import 'package:app_financeiro/common/widgets/multi_text_button.dart';
 import 'package:app_financeiro/common/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
@@ -36,13 +37,16 @@ class OnboardingPage extends StatelessWidget {
                 text: "Get Started",
                 onPressed: () {
                   log("Get Started");
+                  Navigator.pushNamed(
+                    context,
+                    NamedRoutes.signUp,
+                  );
                 },
               ),
             ),
             MultiTextButton(
-              onPressed: () {
-                log('Login');
-              },
+              onPressed: () =>
+                  Navigator.popAndPushNamed(context, NamedRoutes.signIn),
               children: [
                 Text(
                   "Already Have an Account? ",

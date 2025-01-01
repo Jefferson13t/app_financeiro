@@ -27,6 +27,12 @@ class AppTextStyles {
     fontFamily: 'Inter',
   );
 
+  static const TextStyle smallText20 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Inter',
+  );
+
   static const TextStyle inputLabelText = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w400,
